@@ -5,7 +5,22 @@ variable "region" {
 
 variable "name" {
   description = "nome da aplicação"
-  default     = "master-node"
+  default     = "Rancher-Server"
+}
+
+variable "name2" {
+  description = "nome da aplicação"
+  default     = "Master-Node"
+}
+
+variable "name3" {
+  description = "nome da aplicação"
+  default     = "Node-1"
+}
+
+variable "name4" {
+  description = "nome da aplicação"
+  default     = "Node-2"
 }
 
 variable "env" {
@@ -19,7 +34,7 @@ variable "instance_type" {
 }
 
 
-# variable "repo" {
-#   description = "repositorio da aplicação"
-#   default     = "https://www.github.com/thiagorolive/vps-reseller"
-# }
+variable "repo" {
+  description = "repositorio da aplicação"
+  default     = "https://www.github.com/thiagorolive/cluster-kubernetes-rancher"
+}

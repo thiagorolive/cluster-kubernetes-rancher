@@ -2,9 +2,9 @@ output "name" {
   value = var.name
 }
 
-output "public_ip" {
-  value = aws_instance.server.public_ip
-}
+# output "public_ip" {
+#   value = aws_instance.server.public_ip
+# }
 
 output "private_ip" {
   value = aws_instance.server.private_ip
@@ -24,4 +24,55 @@ output "instance_type" {
 
 output "elastic_ip" {
   value = aws_eip_association.eip_assoc.public_ip
+}
+# 
+# 
+output "name2" {
+  value = var.name2
+}
+
+output "private_ip2" {
+  value = aws_instance.server2.private_ip
+}
+
+output "public_dns2" {
+  value = aws_instance.server2.public_dns
+}
+
+output "elastic_ip2" {
+  value = aws_eip_association.eip_assoc2.public_ip
+}
+# 
+# 
+output "name3" {
+  value = var.name3
+}
+
+output "private_ip3" {
+  value = aws_instance.server3.private_ip
+}
+
+output "public_dns3" {
+  value = aws_instance.server3.public_dns
+}
+
+output "elastic_ip3" {
+  value = aws_eip_association.eip_assoc3.public_ip
+}
+# 
+# 
+output "name4" {
+  value = var.name4
+}
+
+output "private_ip4" {
+  value = aws_instance.server4.private_ip
+}
+
+output "public_dns4" {
+  value = aws_instance.server4.public_dns
+}
+
+output "elastic_ip4" {
+  value = aws_eip_association.eip_assoc4.public_ip
 }
