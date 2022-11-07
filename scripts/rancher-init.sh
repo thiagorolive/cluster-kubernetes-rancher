@@ -4,7 +4,7 @@ apt-get update
 apt-get upgrade -y
 # 
 #instalação do docker
-
+# 
 sudo apt-get install \
     ca-certificates \
     curl \
@@ -19,9 +19,19 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 apt-cache madison docker-ce
 sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin -y
 # 
+# Instalação do Rancher
 # 
 curl https://releases.rancher.com/install-docker/19.03.sh | sh
 docker run -d --restart=unless-stopped \
   -p 80:80 -p 443:443 \
   --privileged \
   rancher/rancher:latest
+# # 
+# # 
+# sudo su
+# apt-get install git -y
+# curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+# chmod +x /usr/local/bin/docker-compose
+# ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+# # 
+# # 

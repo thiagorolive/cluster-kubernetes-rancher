@@ -5,7 +5,9 @@ output "name" {
 # output "public_ip" {
 #   value = aws_instance.server.public_ip
 # }
-
+# 
+# Rancher server
+# 
 output "private_ip" {
   value = aws_instance.server.private_ip
 }
@@ -26,6 +28,7 @@ output "elastic_ip" {
   value = aws_eip_association.eip_assoc.public_ip
 }
 # 
+# NODE MASTER
 # 
 output "name2" {
   value = var.name2
@@ -43,6 +46,7 @@ output "elastic_ip2" {
   value = aws_eip_association.eip_assoc2.public_ip
 }
 # 
+# NODE 2
 # 
 output "name3" {
   value = var.name3
@@ -60,6 +64,7 @@ output "elastic_ip3" {
   value = aws_eip_association.eip_assoc3.public_ip
 }
 # 
+# NODE 3  
 # 
 output "name4" {
   value = var.name4
