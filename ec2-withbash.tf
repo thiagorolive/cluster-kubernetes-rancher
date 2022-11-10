@@ -1,13 +1,3 @@
-# data "aws_ami" "ubuntu" {
-#   most_recent = true
-
-#   filter {
-#     name   = "name"
-#     values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
-#   }
-#   owners = ["099720109477"]
-# }
-# 
 # Rancher Server
 # 
 resource "aws_eip_association" "eip_assoc" {
@@ -15,7 +5,7 @@ resource "aws_eip_association" "eip_assoc" {
   allocation_id = aws_eip.server.id
 }
 resource "aws_instance" "server" {
-  ami           = "ami-0f6ded6fd335abde3"
+  ami           = "ami-0454207e5367abf01"
   instance_type = var.instance_type
   user_data = file("scripts/rancher-init.sh")
 
@@ -38,7 +28,7 @@ resource "aws_eip_association" "eip_assoc2" {
   allocation_id = aws_eip.server2.id
 }
 resource "aws_instance" "server2" {
-  ami           = "ami-0f6ded6fd335abde3"
+  ami           = "ami-0454207e5367abf01"
   instance_type = var.instance_type
   user_data = file("scripts/nodes-init.sh")
 
@@ -62,7 +52,7 @@ resource "aws_eip_association" "eip_assoc3" {
   allocation_id = aws_eip.server3.id
 }
 resource "aws_instance" "server3" {
-  ami           = "ami-0f6ded6fd335abde3"
+  ami           = "ami-0454207e5367abf01"
   instance_type = var.instance_type
   user_data = file("scripts/nodes-init.sh")
 
@@ -86,7 +76,7 @@ resource "aws_eip_association" "eip_assoc4" {
   allocation_id = aws_eip.server4.id
 }
 resource "aws_instance" "server4" {
-  ami           = "ami-0f6ded6fd335abde3"
+  ami           = "ami-0454207e5367abf01"
   instance_type = var.instance_type
   user_data = file("scripts/nodes-init.sh")
 

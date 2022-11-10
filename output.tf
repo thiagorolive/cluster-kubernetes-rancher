@@ -1,13 +1,9 @@
+# Rancher server
+# 
 output "name" {
   value = var.name
 }
 
-# output "public_ip" {
-#   value = aws_instance.server.public_ip
-# }
-# 
-# Rancher server
-# 
 output "private_ip" {
   value = aws_instance.server.private_ip
 }
